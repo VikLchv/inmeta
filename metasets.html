@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inmeta – MetaSets</title>
+    <link rel="stylesheet" href="css/inmeta.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <div class="sidebar">
+        <div class="sidebar-logo">Inmeta</div>
+
+        <div class="sidebar-section-label">Main</div>
+        <a class="nav-link" href="overview.html">Overview</a>
+        <a class="nav-link active" href="metaspaces.html">MetaSpaces</a>
+    </div>
+
+    <div style="flex:1; display:flex; flex-direction:column;">
+        <div class="topbar">
+            <div class="topbar-title">MetaSets (MetaLink: oracle-prod)</div>
+            <div class="topbar-right">
+                <button class="btn-primary">+ Create MetaSet</button>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="content-header">
+                <h1>MetaSets</h1>
+                <p>Logical groupings of tables within this MetaLink.</p>
+            </div>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>MetaSet</th>
+                        <th>Description</th>
+                        <th>Tables</th>
+                        <th>Last AI update</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr onclick="location.href='metaset.html';">
+                        <td>customers</td>
+                        <td>Core customer entities</td>
+                        <td>12</td>
+                        <td>—</td>
+                    </tr>
+                    <tr onclick="location.href='metaset.html';">
+                        <td>orders</td>
+                        <td>Order lifecycle & transactions</td>
+                        <td>9</td>
+                        <td>—</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

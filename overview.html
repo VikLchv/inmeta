@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inmeta – Overview</title>
+    <link rel="stylesheet" href="css/inmeta.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <div class="sidebar-logo">Inmeta</div>
+
+        <!-- MAIN SECTION -->
+        <div class="sidebar-section-label">Main</div>
+
+        <a class="nav-link active" href="overview.html">
+            <span class="sidebar-link-icon">
+                <!-- ICON: metaspace (placeholder) -->
+                <svg viewBox="0 0 24 24" class="icon icon-sm icon--primary">
+                    <!-- metaspace.svg content -->
+                </svg>
+            </span>
+            Overview
+        </a>
+
+        <a class="nav-link" href="metaspaces.html">
+            <span class="sidebar-link-icon">
+                <!-- ICON: metaspace -->
+                <svg viewBox="0 0 24 24" class="icon icon-sm icon--primary">
+                    <!-- metaspace.svg content -->
+                </svg>
+            </span>
+            MetaSpaces
+        </a>
+
+        <!-- CONTEXT (EMPTY ON OVERVIEW PAGE) -->
+        <div class="sidebar-section-label">Context</div>
+        <div class="sidebar-empty">Open a MetaSpace to see structure.</div>
+
+        <!-- RECENT ACTIVITY -->
+        <div class="sidebar-section-label">Recent</div>
+
+        <a class="nav-link" href="table.html">
+            <span class="sidebar-link-icon">
+                <!-- ICON: table -->
+                <svg viewBox="0 0 24 24" class="icon icon-sm icon--accent">
+                    <!-- table.svg content -->
+                </svg>
+            </span>
+            Table: customers
+        </a>
+
+        <a class="nav-link" href="metaset.html">
+            <span class="sidebar-link-icon">
+                <!-- ICON: metaset -->
+                <svg viewBox="0 0 24 24" class="icon icon-sm icon--accent">
+                    <!-- metaset.svg content -->
+                </svg>
+            </span>
+            MetaSet: orders
+        </a>
+
+        <a class="nav-link" href="metalink.html">
+            <span class="sidebar-link-icon">
+                <!-- ICON: metalink -->
+                <svg viewBox="0 0 24 24" class="icon icon-sm icon--accent">
+                    <!-- metalink.svg content -->
+                </svg>
+            </span>
+            MetaLink: oracle-prod
+        </a>
+    </div>
+
+    <!-- MAIN -->
+    <div style="flex:1; display:flex; flex-direction:column;">
+        <div class="topbar">
+            <div class="topbar-title">Overview</div>
+            <div class="topbar-right">
+                <span class="muted">User</span>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="content-header">
+                <h1>Overview</h1>
+                <p>High-level view of your MetaSpaces, activity and AI insights.</p>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">Active MetaSpaces</div>
+                            <div class="card-subtitle">Total number of data worlds</div>
+                        </div>
+                    </div>
+                    <div style="font-size:24px; font-weight:600;">3</div>
+                    <p class="card-meta">Last created: dna</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">MetaRooms connected</div>
+                            <div class="card-subtitle">Systems across all MetaSpaces</div>
+                        </div>
+                    </div>
+                    <div style="font-size:24px; font-weight:600;">5</div>
+                    <p class="card-meta">Oracle, Salesforce, BigQuery, …</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">AI Index Coverage</div>
+                            <div class="card-subtitle">How much of your metadata is indexed</div>
+                        </div>
+                        <span class="tag tag-ai">AI</span>
+                    </div>
+                    <div style="font-size:24px; font-weight:600;">82%</div>
+                    <p class="card-meta">Last updated: —</p>
+                </div>
+            </div>
+
+            <div class="section-title">Recent MetaSpace activity</div>
+            <div class="card">
+                <p class="card-meta">dna / oracle-prod / customers_metaset</p>
+                <p>AI updated column descriptions for <strong>customers</strong> table.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

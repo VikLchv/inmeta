@@ -2,57 +2,107 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Table Detail</title>
+    <title>Inmeta – Table customers</title>
     <link rel="stylesheet" href="css/inmeta.css">
 </head>
 <body>
 
 <div class="layout">
 
-    <div class="sidebar">
-        <div class="sidebar-logo">Inmeta</div>
-        <a class="nav-link" href="dashboard.html">Dashboard</a>
-        <a class="nav-link" href="datasource.html">Data Sources</a>
-        <a class="nav-link" href="#">AI Search</a>
-        <a class="nav-link" href="#">Settings</a>
-    </div>
+    <!-- Sidebar sem dáš nový sidebar skeleton s ikonami -->
 
-    <div style="width:100%;">
+    <div style="flex:1; display:flex; flex-direction:column;">
         <div class="topbar">
-            <div>Table: CUSTOMERS</div>
-            <div>User</div>
+            <div class="topbar-title">
+                Table: customers (MetaSet: customers / MetaLink: oracle-prod)
+            </div>
+            <div class="topbar-right">
+                <span class="tag tag-ai">AI</span>
+                <button class="btn-ghost">Explain table</button>
+            </div>
         </div>
 
         <div class="content">
+            <div class="content-header">
+                <h1>customers</h1>
+                <p>Base customer entity table in oracle-prod (ORACLE).</p>
+            </div>
 
-            <h2>Columns</h2>
+            <div class="card" style="margin-bottom:24px;">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Table metadata</div>
+                        <div class="card-subtitle">Physical and logical properties</div>
+                    </div>
+                </div>
+                <div style="font-size:13px; display:grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap:8px;">
+                    <div><strong>Owner:</strong> DNA_OWNER</div>
+                    <div><strong>Tablespace:</strong> USERS</div>
+                    <div><strong>Estimated rows:</strong> 1 234 567</div>
+                    <div><strong>Last analyzed:</strong> —</div>
+                    <div><strong>Engine:</strong> ORACLE</div>
+                </div>
+            </div>
+
+            <div class="section-title">Columns</div>
 
             <table class="table">
                 <thead>
                     <tr>
                         <th>Column</th>
                         <th>Type</th>
+                        <th>Length</th>
+                        <th>Precision</th>
+                        <th>Scale</th>
+                        <th>Nullable</th>
+                        <th>Default</th>
                         <th>Key</th>
+                        <th>FK target</th>
+                        <th>Comment</th>
+                        <th>AI Description</th>
                     </tr>
                 </thead>
-
                 <tbody>
                     <tr>
                         <td>customer_id</td>
                         <td>NUMBER</td>
-                        <td>PK</td>
+                        <td>22</td>
+                        <td>10</td>
+                        <td>0</td>
+                        <td>NO</td>
+                        <td>NULL</td>
+                        <td><span class="tag">PK</span></td>
+                        <td>—</td>
+                        <td>Primary key of customer</td>
+                        <td>Unique identifier for each customer.</td>
                     </tr>
 
                     <tr>
-                        <td>first_name</td>
-                        <td>VARCHAR2</td>
+                        <td>segment_id</td>
+                        <td>NUMBER</td>
+                        <td>22</td>
+                        <td>6</td>
+                        <td>0</td>
+                        <td>YES</td>
+                        <td>NULL</td>
                         <td>—</td>
+                        <td>segments.segment_id</td>
+                        <td>Optional link to segment</td>
+                        <td>Indicates which segment the customer is assigned to.</td>
                     </tr>
 
                     <tr>
                         <td>created_at</td>
                         <td>DATE</td>
                         <td>—</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>NO</td>
+                        <td>SYSDATE</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>Creation timestamp</td>
+                        <td>When the customer record was created in the system.</td>
                     </tr>
                 </tbody>
             </table>

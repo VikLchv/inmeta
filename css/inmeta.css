@@ -4,31 +4,39 @@
 
 /* Brand Colors */
 :root {
-    --primary: #342C29;
-    --accent: #A69F5C;
-    --bg: #F7F3EE;
-    --text: #1B1A18;
+    --primary: #342C29;      /* Deep Mocha */
+    --accent: #A69F5C;       /* Palm Leaf Gold */
+    --bg: #F7F3EE;           /* Parchment */
+    --text: #1B1A18;         /* Charcoal Ink */
 
-    --neutral-light: #E4DFD9;
-    --neutral-mid: #C8C2BA;
+    --neutral-light: #E4DFD9; /* Warm Greige */
+    --neutral-mid: #C8C2BA;   /* Soft Taupe */
 
-    --ai-accent: #8FAFBF;
+    --ai-accent: #8FAFBF;     /* Azure Mist */
 
     --radius: 8px;
     --shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 
 /* Base */
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    font-family: "Inter", sans-serif;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     background: var(--bg);
     color: var(--text);
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     margin: 0 0 12px 0;
     font-weight: 600;
+}
+
+p {
+    margin: 0 0 8px 0;
 }
 
 a {
@@ -52,18 +60,27 @@ button {
    SIDEBAR
    =========================== */
 .sidebar {
-    width: 220px;
+    width: 230px;
     background: var(--neutral-mid);
     padding: 24px 16px;
     display: flex;
     flex-direction: column;
+    gap: 16px;
 }
 
 .sidebar-logo {
     font-size: 22px;
     font-weight: 700;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
     color: var(--primary);
+}
+
+.sidebar-section-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.7;
+    margin: 12px 0 4px;
 }
 
 .nav-link {
@@ -71,6 +88,7 @@ button {
     border-radius: var(--radius);
     color: var(--primary);
     font-weight: 500;
+    font-size: 14px;
 }
 
 .nav-link:hover {
@@ -81,6 +99,7 @@ button {
     border-left: 4px solid var(--accent);
     padding-left: 8px;
     font-weight: 600;
+    background: rgba(0,0,0,0.03);
 }
 
 /* ===========================
@@ -95,6 +114,22 @@ button {
     justify-content: space-between;
     padding: 0 24px;
     box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.topbar-title {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    opacity: 0.9;
 }
 
 /* ===========================
@@ -102,48 +137,95 @@ button {
    =========================== */
 .content {
     flex: 1;
-    padding: 32px;
+    padding: 24px 32px 32px 32px;
     overflow-y: auto;
+}
+
+.content-header {
+    margin-bottom: 20px;
+}
+
+.content-header h1 {
+    font-size: 22px;
+    margin-bottom: 4px;
+}
+
+.content-header p {
+    font-size: 14px;
+    opacity: 0.85;
 }
 
 /* Cards */
 .card {
     background: var(--neutral-light);
     border-radius: var(--radius);
-    padding: 20px;
+    padding: 16px 18px;
     box-shadow: var(--shadow);
-    margin-bottom: 20px;
+    margin-bottom: 16px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.card-title {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.card-subtitle {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.card-meta {
+    font-size: 12px;
+    opacity: 0.75;
+}
+
+/* Grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
 }
 
 /* Table */
 .table {
     width: 100%;
     border-collapse: collapse;
+    font-size: 14px;
 }
 
 .table th {
     text-align: left;
-    padding: 12px;
+    padding: 10px 8px;
     border-bottom: 2px solid var(--primary);
     font-weight: 600;
+    font-size: 13px;
 }
 
 .table td {
-    padding: 12px;
+    padding: 10px 8px;
     border-bottom: 1px solid var(--neutral-mid);
 }
 
 .table tr:hover {
     background: var(--neutral-mid);
+    cursor: pointer;
 }
 
 /* Buttons */
 .btn-primary {
     background: var(--primary);
     color: white;
-    padding: 10px 16px;
+    padding: 9px 14px;
     border-radius: var(--radius);
     font-weight: 600;
+    font-size: 14px;
 }
 
 .btn-primary:hover {
@@ -153,18 +235,57 @@ button {
 .btn-secondary {
     background: var(--accent);
     color: var(--primary);
-    padding: 8px 14px;
+    padding: 7px 12px;
     border-radius: var(--radius);
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.btn-ghost {
+    background: transparent;
+    padding: 6px 10px;
+    border-radius: var(--radius);
+    font-size: 13px;
+}
+
+.btn-ghost:hover {
+    background: rgba(0,0,0,0.05);
+}
+
+/* Tags & badges */
+.tag {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 999px;
+    font-size: 11px;
+    border: 1px solid var(--neutral-mid);
+    opacity: 0.9;
+}
+
+.tag-ai {
+    border-color: var(--ai-accent);
+    color: var(--primary);
 }
 
 /* Inputs */
-input {
+label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+input, select {
     width: 100%;
-    padding: 12px;
+    padding: 10px 12px;
     border-radius: var(--radius);
     border: 1px solid var(--neutral-mid);
     background: white;
-    font-size: 15px;
+    font-size: 14px;
+}
+
+/* Simple form layout */
+.form-row {
+    margin-bottom: 14px;
 }
 
 /* Login Container */
@@ -179,4 +300,142 @@ input {
 
 .login-container h2 {
     margin-bottom: 24px;
+    font-size: 20px;
+}
+
+/* Small helpers */
+.muted {
+    opacity: 0.75;
+    font-size: 13px;
+}
+
+.section-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 16px 0 8px;
+}
+
+/* ICONS */
+.icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.icon-sm {
+    width: 16px;
+    height: 16px;
+}
+
+.icon-lg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Color variants via currentColor */
+.icon--primary {
+    color: #342C29; /* Deep Mocha */
+}
+
+.icon--accent {
+    color: #A69F5C; /* Palm Leaf Gold */
+}
+
+.icon--neutral {
+    color: #C8C2BA; /* Soft Taupe */
+}
+
+/* Sidebar specific */
+.sidebar-link-icon {
+    margin-right: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Layout wrapper */
+.layout {
+    display: flex;
+    height: 100vh;
+    background: #F7F3EE; /* Parchment */
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 240px;
+    background: #342C29; /* Deep Mocha */
+    color: #F7F3EE;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+/* Sidebar logo */
+.sidebar-logo {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Section label */
+.sidebar-section-label {
+    margin-top: 20px;
+    margin-bottom: 6px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #A69F5C;
+}
+
+/* Sidebar links */
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 6px 0;
+    color: #E4DFD9;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: #FFFFFF;
+}
+
+.nav-link.active {
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+/* Sidebar icons */
+.sidebar-link-icon {
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+/* Make main content area have background */
+.topbar,
+.content {
+    background: #F7F3EE;
+}
+
+
+/* vertical bar */
+.sidebar-active-bar {
+    width: 4px;
+    height: 100%;
+    margin-right: 12px;
+    background: transparent;
+    border-radius: 0 4px 4px 0;
+}
+
+/* active left bar */
+.nav-link.active .sidebar-active-bar {
+    background: #A69F5C; /* Palm Leaf Gold */
 }

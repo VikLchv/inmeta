@@ -1,0 +1,18 @@
+<svg viewBox="0 0 24 24" class="icon icon-ms" aria-hidden="true">
+  <!-- outer cube frame -->
+  <rect x="4" y="4" width="16" height="16" rx="3"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="butt"
+        stroke-linejoin="miter" />
+  <!-- inner grid -->
+  <rect x="7" y="7" width="4" height="4" rx="1"
+        fill="currentColor" opacity="0.18" />
+  <rect x="13" y="7" width="4" height="4" rx="1"
+        fill="currentColor" opacity="0.28" />
+  <rect x="7" y="13" width="4" height="4" rx="1"
+        fill="currentColor" opacity="0.28" />
+  <rect x="13" y="13" width="4" height="4" rx="1"
+        fill="currentColor" opacity="0.4" />
+</svg>

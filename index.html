@@ -2,21 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Inmeta Login</title>
+    <title>Inmeta – Login</title>
     <link rel="stylesheet" href="css/inmeta.css">
 </head>
 <body>
 
 <div class="login-container">
     <h2>Inmeta</h2>
+    <p class="muted" style="margin-bottom:20px;">Sign in to access your MetaSpaces.</p>
     <form>
-        <label>Email</label>
-        <input type="email" placeholder="you@example.com">
+        <div class="form-row">
+            <label>Email</label>
+            <input type="email" placeholder="you@example.com">
+        </div>
 
-        <label style="margin-top:16px;">Password</label>
-        <input type="password" placeholder="••••••••">
+        <div class="form-row">
+            <label>Password</label>
+            <input type="password" placeholder="••••••••">
+        </div>
 
-        <button class="btn-primary" style="margin-top:20px; width:100%;">Sign in</button>
+        <button class="btn-primary" style="margin-top:12px; width:100%;"
+                onclick="location.href='overview.html'; return false;">
+            Sign in
+        </button>
     </form>
 </div>
 

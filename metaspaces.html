@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inmeta – MetaSpaces</title>
+    <link rel="stylesheet" href="css/inmeta.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+        <div class="sidebar-logo">Inmeta</div>
+
+        <!-- MAIN -->
+        <div class="sidebar-section-label">Main</div>
+
+        <a class="nav-link" href="overview.html">
+            <span class="sidebar-active-bar"></span>
+            <span class="sidebar-link-icon">
+                <svg viewBox="0 0 24 24" class="icon icon-sm icon--primary">
+                    <!-- metaspace.svg -->
+                </svg>
+            </span>
+            Overview
+        </a>
+
+        <a class="nav-link active" href="metaspaces.html">
+            <span class="sidebar-active-bar active"></span>
+            <span class="sidebar-link-icon">
+                <svg viewBox="0 0 24 24" class="icon icon-sm icon--primary">
+                    <!-- metaspace.svg -->
+                </svg>
+            </span>
+            MetaSpaces
+        </a>
+
+        <!-- CONTEXT -->
+        <div class="sidebar-section-label">Context</div>
+        <div class="sidebar-empty">Select a MetaSpace to view structure.</div>
+
+        <!-- RECENT -->
+        <div class="sidebar-section-label">Recent</div>
+
+        <a class="nav-link" href="table.html">
+            <span class="sidebar-active-bar"></span>
+            <span class="sidebar-link-icon">
+                <svg viewBox="0 0 24 24" class="icon icon-sm icon--accent">
+                    <!-- table.svg -->
+                </svg>
+            </span>
+            Table: customers
+        </a>
+
+        <a class="nav-link" href="metaset.html">
+            <span class="sidebar-active-bar"></span>
+            <span class="sidebar-link-icon">
+                <svg viewBox="0 0 24 24" class="icon icon-sm icon--accent">
+                    <!-- metaset.svg -->
+                </svg>
+            </span>
+            MetaSet: orders
+        </a>
+
+        <a class="nav-link" href="metalink.html">
+            <span class="sidebar-active-bar"></span>
+            <span class="sidebar-link-icon">
+                <svg viewBox="0 0 24 24" class="icon icon-sm icon--accent">
+                    <!-- metalink.svg -->
+                </svg>
+            </span>
+            MetaLink: oracle-prod
+        </a>
+
+    </div>
+
+    <!-- MAIN -->
+    <div style="flex:1; display:flex; flex-direction:column;">
+        <div class="topbar">
+            <div class="topbar-title">MetaSpaces</div>
+            <div class="topbar-right">
+                <button class="btn-primary" onclick="location.href='metaspace.html';">+ Create MetaSpace</button>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="content-header">
+                <h1>MetaSpaces</h1>
+                <p>Top-level data worlds, each with its own MetaRooms, MetaLinks and MetaSets.</p>
+            </div>
+
+            <div class="card-grid">
+                <div class="card" onclick="location.href='metaspace.html';">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">dna</div>
+                            <div class="card-subtitle">Data Analytics MetaSpace</div>
+                        </div>
+                        <span class="tag">3 MetaRooms</span>
+                    </div>
+                    <p class="card-meta">Owners: data-analytics-team</p>
+                </div>
+
+                <div class="card" onclick="location.href='metaspace.html';">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">salesforce</div>
+                            <div class="card-subtitle">Sales Team MetaSpace</div>
+                        </div>
+                        <span class="tag">1 MetaRoom</span>
+                    </div>
+                    <p class="card-meta">Owners: salesforce-team</p>
+                </div>
+
+                <div class="card" onclick="location.href='metaspace.html';">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">marketing36
