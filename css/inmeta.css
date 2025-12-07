@@ -1,0 +1,182 @@
+/* ===========================
+   INMETA DESIGN SYSTEM
+   =========================== */
+
+/* Brand Colors */
+:root {
+    --primary: #342C29;
+    --accent: #A69F5C;
+    --bg: #F7F3EE;
+    --text: #1B1A18;
+
+    --neutral-light: #E4DFD9;
+    --neutral-mid: #C8C2BA;
+
+    --ai-accent: #8FAFBF;
+
+    --radius: 8px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+/* Base */
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+h1, h2, h3 {
+    margin: 0 0 12px 0;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* Layout Wrapper (Sidebar + Content) */
+.layout {
+    display: flex;
+    height: 100vh;
+}
+
+/* ===========================
+   SIDEBAR
+   =========================== */
+.sidebar {
+    width: 220px;
+    background: var(--neutral-mid);
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-logo {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 32px;
+    color: var(--primary);
+}
+
+.nav-link {
+    padding: 10px 12px;
+    border-radius: var(--radius);
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    background: var(--neutral-light);
+}
+
+.nav-link.active {
+    border-left: 4px solid var(--accent);
+    padding-left: 8px;
+    font-weight: 600;
+}
+
+/* ===========================
+   TOPBAR
+   =========================== */
+.topbar {
+    height: 56px;
+    background: var(--bg);
+    border-bottom: 1px solid var(--neutral-mid);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    box-shadow: var(--shadow);
+}
+
+/* ===========================
+   CONTENT AREA
+   =========================== */
+.content {
+    flex: 1;
+    padding: 32px;
+    overflow-y: auto;
+}
+
+/* Cards */
+.card {
+    background: var(--neutral-light);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+}
+
+/* Table */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 2px solid var(--primary);
+    font-weight: 600;
+}
+
+.table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--neutral-mid);
+}
+
+.table tr:hover {
+    background: var(--neutral-mid);
+}
+
+/* Buttons */
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    padding: 10px 16px;
+    border-radius: var(--radius);
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+.btn-secondary {
+    background: var(--accent);
+    color: var(--primary);
+    padding: 8px 14px;
+    border-radius: var(--radius);
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: var(--radius);
+    border: 1px solid var(--neutral-mid);
+    background: white;
+    font-size: 15px;
+}
+
+/* Login Container */
+.login-container {
+    max-width: 360px;
+    margin: 120px auto;
+    background: var(--neutral-light);
+    padding: 32px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.login-container h2 {
+    margin-bottom: 24px;
+}
