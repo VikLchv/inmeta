@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create MetaLink</title>
+    <link rel="stylesheet" href="css/inmeta.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <div class="sidebar-logo">Inmeta</div>
+
+        <div class="sidebar-section-label">Main</div>
+        <a class="nav-link" href="overview.html">Overview</a>
+        <a class="nav-link" href="metaspaces.html">MetaSpaces</a>
+
+        <div class="sidebar-section-label">Context</div>
+
+        <a class="nav-link active" href="metaspace.html">MetaSpace: dna</a>
+
+        <div class="sidebar-section-label">MetaRooms</div>
+        <a class="nav-link active" href="metaroom.html">oracle</a>
+
+        <div class="sidebar-section-label">Creating</div>
+        <div class="sidebar-empty">New MetaLink…</div>
+    </div>
+
+
+
+    <!-- MAIN -->
+    <div style="flex:1; display:flex; flex-direction:column;">
+
+        <div class="topbar">
+            <div class="topbar-title">Create MetaLink (MetaRoom: oracle)</div>
+        </div>
+
+        <div class="content">
+
+            <div class="content-header">
+                <h1>New MetaLink</h1>
+                <p>A MetaLink represents one environment connection (dev, staging, prod…)</p>
+            </div>
+
+            <div class="card" style="max-width:520px;">
+
+                <form>
+
+                    <div class="form-row">
+                        <label>MetaLink name</label>
+                        <input type="text" placeholder="e.g. oracle-dev, oracle-prod">
+                    </div>
+
+                    <div class="form-row">
+                        <label>Environment</label>
+                        <select>
+                            <option>dev</option>
+                            <option>staging</option>
+                            <option>prod</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <label>Connection string</label>
+                        <input type="text" placeholder="oracle://hostname:1521/db">
+                    </div>
+
+                    <div class="form-row">
+                        <label>Username</label>
+                        <input type="text" placeholder="db user">
+                    </div>
+
+                    <div class="form-row">
+                        <label>Password</label>
+                        <input type="password" placeholder="db password">
+                    </div>
+
+                    <button class="btn-primary" style="margin-top:16px;">Create MetaLink</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

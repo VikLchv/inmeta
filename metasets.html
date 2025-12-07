@@ -9,26 +9,131 @@
 
 <div class="layout">
 
+    <!-- SIDEBAR -->
     <div class="sidebar">
+
         <div class="sidebar-logo">Inmeta</div>
 
+        <!-- MAIN -->
         <div class="sidebar-section-label">Main</div>
-        <a class="nav-link" href="overview.html">Overview</a>
-        <a class="nav-link active" href="metaspaces.html">MetaSpaces</a>
+
+        <a class="nav-link" href="overview.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--primary"></svg>
+            </span>
+            Overview
+        </a>
+
+        <a class="nav-link" href="metaspaces.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--primary"></svg>
+            </span>
+            MetaSpaces
+        </a>
+
+        <!-- CONTEXT -->
+        <div class="sidebar-section-label">Context</div>
+
+        <!-- ACTIVE METASPACE -->
+        <a class="nav-link active" href="metaspace.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--primary"></svg>
+            </span>
+            MetaSpace: dna
+        </a>
+
+        <!-- METAROOMS -->
+        <div class="sidebar-section-label">MetaRooms</div>
+
+        <a class="nav-link active" href="metaroom.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--neutral"></svg>
+            </span>
+            oracle
+        </a>
+
+        <a class="nav-link" href="metaroom.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--neutral"></svg>
+            </span>
+            salesforce
+        </a>
+
+        <a class="nav-link" href="metaroom.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--neutral"></svg>
+            </span>
+            bigquery
+        </a>
+
+        <!-- METALINKS -->
+        <div class="sidebar-section-label">MetaLinks</div>
+
+        <a class="nav-link active" href="metalink.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--accent"></svg>
+            </span>
+            oracle-prod
+        </a>
+
+        <a class="nav-link" href="metalink.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--accent"></svg>
+            </span>
+            oracle-dev
+        </a>
+
+        <a class="nav-link" href="metalink.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--accent"></svg>
+            </span>
+            oracle-staging
+        </a>
+
+        <!-- METASETS SECTION (THIS PAGE) -->
+        <div class="sidebar-section-label">MetaSets</div>
+
+        <a class="nav-link active" href="metasets.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--accent"></svg>
+            </span>
+            All MetaSets
+        </a>
+
+        <!-- RECENT -->
+        <div class="sidebar-section-label">Recent</div>
+
+        <a class="nav-link" href="table.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--accent"></svg>
+            </span>
+            Table: customers
+        </a>
+
+        <a class="nav-link" href="metaset.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--accent"></svg>
+            </span>
+            MetaSet: orders
+        </a>
+
     </div>
 
+    <!-- MAIN CONTENT -->
     <div style="flex:1; display:flex; flex-direction:column;">
+
         <div class="topbar">
-            <div class="topbar-title">MetaSets (MetaLink: oracle-prod)</div>
+            <div class="topbar-title">MetaSets (oracle-prod)</div>
             <div class="topbar-right">
                 <button class="btn-primary">+ Create MetaSet</button>
             </div>
         </div>
 
         <div class="content">
+
             <div class="content-header">
                 <h1>MetaSets</h1>
-                <p>Logical groupings of tables within this MetaLink.</p>
+                <p>Logical groupings of tables within oracle-prod.</p>
             </div>
 
             <table class="table">
@@ -47,14 +152,23 @@
                         <td>12</td>
                         <td>—</td>
                     </tr>
+
                     <tr onclick="location.href='metaset.html';">
                         <td>orders</td>
                         <td>Order lifecycle & transactions</td>
                         <td>9</td>
                         <td>—</td>
                     </tr>
+
+                    <tr onclick="location.href='metaset.html';">
+                        <td>billing</td>
+                        <td>Invoices & payments</td>
+                        <td>6</td>
+                        <td>—</td>
+                    </tr>
                 </tbody>
             </table>
+
         </div>
     </div>
 

@@ -11,6 +11,7 @@
 
     <!-- SIDEBAR -->
     <div class="sidebar">
+        
         <div class="sidebar-logo">Inmeta</div>
 
         <!-- MAIN -->
@@ -18,17 +19,19 @@
 
         <a class="nav-link" href="overview.html">
             <span class="sidebar-link-icon">
-                <svg class="icon icon-sm" viewBox="0 0 24 24"></svg>
+                <svg class="icon icon-sm"></svg>
             </span>
             Overview
         </a>
 
         <a class="nav-link" href="metaspaces.html">
             <span class="sidebar-link-icon">
-                <svg class="icon icon-sm" viewBox="0 0 24 24"></svg>
+                <svg class="icon icon-sm"></svg>
             </span>
             MetaSpaces
         </a>
+
+
 
         <!-- CONTEXT -->
         <div class="sidebar-section-label">Context</div>
@@ -36,59 +39,75 @@
         <!-- ACTIVE METASPACE -->
         <a class="nav-link active" href="metaspace.html">
             <span class="sidebar-link-icon">
-                <svg class="icon icon-sm" viewBox="0 0 24 24"></svg>
+                <svg class="icon icon-sm"></svg>
             </span>
             MetaSpace: dna
         </a>
 
+
+
         <!-- METAROOMS -->
         <div class="sidebar-section-label">MetaRooms</div>
 
+        <!-- CREATE META ROOM -->
+        <a class="nav-link" href="create_metaroom.html" style="font-weight:600; color:var(--accent);">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--accent"></svg>
+            </span>
+            + Create MetaRoom
+        </a>
+
+        <!-- ROOM LIST -->
         <a class="nav-link" href="metaroom.html">
             <span class="sidebar-link-icon">
-                <svg class="icon icon-sm icon--neutral" viewBox="0 0 24 24"></svg>
+                <svg class="icon icon-sm icon--neutral"></svg>
             </span>
             oracle
         </a>
 
         <a class="nav-link" href="metaroom.html">
             <span class="sidebar-link-icon">
-                <svg class="icon icon-sm icon--neutral" viewBox="0 0 24 24"></svg>
+                <svg class="icon icon-sm icon--neutral"></svg>
             </span>
             salesforce
         </a>
 
         <a class="nav-link" href="metaroom.html">
             <span class="sidebar-link-icon">
-                <svg class="icon icon-sm icon--neutral" viewBox="0 0 24 24"></svg>
+                <svg class="icon icon-sm icon--neutral"></svg>
             </span>
             bigquery
         </a>
+
+
 
         <!-- RECENT -->
         <div class="sidebar-section-label">Recent</div>
 
         <a class="nav-link" href="table.html">
             <span class="sidebar-link-icon">
-                <svg class="icon icon-sm icon--accent" viewBox="0 0 24 24"></svg>
+                <svg class="icon icon-sm icon--accent"></svg>
             </span>
             Table: customers
         </a>
 
         <a class="nav-link" href="metaset.html">
             <span class="sidebar-link-icon">
-                <svg class="icon icon-sm icon--accent" viewBox="0 0 24 24"></svg>
+                <svg class="icon icon-sm icon--accent"></svg>
             </span>
             MetaSet: orders
         </a>
 
         <a class="nav-link" href="metalink.html">
             <span class="sidebar-link-icon">
-                <svg class="icon icon-sm icon--accent" viewBox="0 0 24 24"></svg>
+                <svg class="icon icon-sm icon--accent"></svg>
             </span>
             MetaLink: oracle-prod
         </a>
     </div>
+
+
+
 
     <!-- MAIN CONTENT -->
     <div style="flex:1; display:flex; flex-direction:column;">
@@ -101,6 +120,8 @@
             </div>
         </div>
 
+
+
         <!-- CONTENT -->
         <div class="content">
 
@@ -109,7 +130,15 @@
                 <p>Data Analytics MetaSpace containing Oracle, Salesforce and BigQuery systems.</p>
             </div>
 
+
+
             <div class="section-title">MetaRooms</div>
+
+            <!-- PRIMARY CTA -->
+            <button class="btn-primary" onclick="location.href='create_metaroom.html';" style="margin-bottom:16px;">
+                + Create MetaRoom
+            </button>
+
 
             <div class="card-grid">
 
@@ -146,6 +175,7 @@
             </div>
 
         </div> <!-- /content -->
+
     </div> <!-- /main -->
 </div> <!-- /layout -->
 

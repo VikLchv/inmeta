@@ -1,8 +1,3 @@
-/* ===========================
-   INMETA DESIGN SYSTEM
-   =========================== */
-
-/* Brand Colors */
 :root {
     --primary: #342C29;      /* Deep Mocha */
     --accent: #A69F5C;       /* Palm Leaf Gold */
@@ -50,69 +45,116 @@ button {
     font-family: inherit;
 }
 
-/* Layout Wrapper (Sidebar + Content) */
+
+/* ===========================
+   LAYOUT WRAPPER
+=========================== */
 .layout {
     display: flex;
     height: 100vh;
+    background: var(--bg);
+    padding-left: 230px; /* reserve space for fixed sidebar */
+    overflow: hidden;
 }
 
+
 /* ===========================
-   SIDEBAR
-   =========================== */
+   SIDEBAR (fixed + scroll)
+=========================== */
 .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
     width: 230px;
     background: var(--neutral-mid);
+
     padding: 24px 16px;
     display: flex;
     flex-direction: column;
     gap: 16px;
+
+    border-right: 1px solid rgba(0,0,0,0.04);
+
+    overflow-y: auto;
 }
 
+
+/* LOGO */
 .sidebar-logo {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 700;
-    margin-bottom: 24px;
+    margin-bottom: 8px;
     color: var(--primary);
+    letter-spacing: 0.4px;
 }
 
+/* SECTION LABEL */
 .sidebar-section-label {
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    opacity: 0.7;
-    margin: 12px 0 4px;
+    color: #6B6259; /* soft warm brown */
+    margin-top: 20px;
+    margin-bottom: 6px;
+    opacity: 0.9;
 }
 
+/* EMPTY MESSAGE */
+.sidebar-empty {
+    font-size: 13px;
+    color: #7A746B;
+    padding-left: 4px;
+}
+
+/* NAV LINK */
 .nav-link {
-    padding: 10px 12px;
-    border-radius: var(--radius);
+    padding: 8px 10px;
+    border-radius: 6px;
     color: var(--primary);
-    font-weight: 500;
     font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: all 0.15s ease;
 }
 
 .nav-link:hover {
     background: var(--neutral-light);
 }
 
+/* ACTIVE ITEM */
 .nav-link.active {
     border-left: 4px solid var(--accent);
-    padding-left: 8px;
-    font-weight: 600;
+    padding-left: 6px;
     background: rgba(0,0,0,0.03);
+    font-weight: 600;
+    color: var(--accent);
 }
+
+/* ICON WRAPPER */
+.sidebar-link-icon {
+    margin-right: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 /* ===========================
    TOPBAR
-   =========================== */
+=========================== */
 .topbar {
     height: 56px;
     background: var(--bg);
     border-bottom: 1px solid var(--neutral-mid);
+
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 24px;
+
     box-shadow: var(--shadow);
     position: sticky;
     top: 0;
@@ -132,9 +174,10 @@ button {
     opacity: 0.9;
 }
 
+
 /* ===========================
    CONTENT AREA
-   =========================== */
+=========================== */
 .content {
     flex: 1;
     padding: 24px 32px 32px 32px;
@@ -154,6 +197,7 @@ button {
     font-size: 14px;
     opacity: 0.85;
 }
+
 
 /* Cards */
 .card {
@@ -186,12 +230,14 @@ button {
     opacity: 0.75;
 }
 
+
 /* Grid */
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 16px;
 }
+
 
 /* Table */
 .table {
@@ -217,6 +263,7 @@ button {
     background: var(--neutral-mid);
     cursor: pointer;
 }
+
 
 /* Buttons */
 .btn-primary {
@@ -252,7 +299,8 @@ button {
     background: rgba(0,0,0,0.05);
 }
 
-/* Tags & badges */
+
+/* Tags */
 .tag {
     display: inline-block;
     padding: 3px 8px;
@@ -266,6 +314,7 @@ button {
     border-color: var(--ai-accent);
     color: var(--primary);
 }
+
 
 /* Inputs */
 label {
@@ -283,27 +332,12 @@ input, select {
     font-size: 14px;
 }
 
-/* Simple form layout */
 .form-row {
     margin-bottom: 14px;
 }
 
-/* Login Container */
-.login-container {
-    max-width: 360px;
-    margin: 120px auto;
-    background: var(--neutral-light);
-    padding: 32px;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-}
 
-.login-container h2 {
-    margin-bottom: 24px;
-    font-size: 20px;
-}
-
-/* Small helpers */
+/* Helpers */
 .muted {
     opacity: 0.75;
     font-size: 13px;
@@ -315,12 +349,12 @@ input, select {
     margin: 16px 0 8px;
 }
 
-/* ICONS */
+
+/* Icons */
 .icon {
     display: inline-block;
     width: 20px;
     height: 20px;
-    vertical-align: middle;
 }
 
 .icon-sm {
@@ -333,109 +367,14 @@ input, select {
     height: 24px;
 }
 
-/* Color variants via currentColor */
 .icon--primary {
-    color: #342C29; /* Deep Mocha */
+    color: #342C29;
 }
 
 .icon--accent {
-    color: #A69F5C; /* Palm Leaf Gold */
-}
-
-.icon--neutral {
-    color: #C8C2BA; /* Soft Taupe */
-}
-
-/* Sidebar specific */
-.sidebar-link-icon {
-    margin-right: 8px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Layout wrapper */
-.layout {
-    display: flex;
-    height: 100vh;
-    background: #F7F3EE; /* Parchment */
-}
-
-/* SIDEBAR */
-.sidebar {
-    width: 240px;
-    background: #342C29; /* Deep Mocha */
-    color: #F7F3EE;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    font-size: 14px;
-}
-
-/* Sidebar logo */
-.sidebar-logo {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-/* Section label */
-.sidebar-section-label {
-    margin-top: 20px;
-    margin-bottom: 6px;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
     color: #A69F5C;
 }
 
-/* Sidebar links */
-.nav-link {
-    display: flex;
-    align-items: center;
-    padding: 6px 0;
-    color: #E4DFD9;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.2s;
-}
-
-.nav-link:hover {
-    color: #FFFFFF;
-}
-
-.nav-link.active {
-    color: #FFFFFF;
-    font-weight: 600;
-}
-
-/* Sidebar icons */
-.sidebar-link-icon {
-    width: 20px;
-    height: 20px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
-}
-
-/* Make main content area have background */
-.topbar,
-.content {
-    background: #F7F3EE;
-}
-
-
-/* vertical bar */
-.sidebar-active-bar {
-    width: 4px;
-    height: 100%;
-    margin-right: 12px;
-    background: transparent;
-    border-radius: 0 4px 4px 0;
-}
-
-/* active left bar */
-.nav-link.active .sidebar-active-bar {
-    background: #A69F5C; /* Palm Leaf Gold */
+.icon--neutral {
+    color: #C8C2BA;
 }

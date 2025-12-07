@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create MetaRoom</title>
+    <link rel="stylesheet" href="css/inmeta.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <div class="sidebar-logo">Inmeta</div>
+
+        <div class="sidebar-section-label">Main</div>
+        <a class="nav-link" href="overview.html">Overview</a>
+        <a class="nav-link" href="metaspaces.html">MetaSpaces</a>
+
+        <div class="sidebar-section-label">Context</div>
+        <a class="nav-link active" href="metaspace.html">MetaSpace: dna</a>
+
+        <div class="sidebar-section-label">Creating</div>
+        <div class="sidebar-empty">New MetaRoom…</div>
+    </div>
+
+
+    <!-- MAIN -->
+    <div style="flex:1; display:flex; flex-direction:column;">
+
+        <div class="topbar">
+            <div class="topbar-title">Create MetaRoom (MetaSpace: dna)</div>
+        </div>
+
+        <div class="content">
+
+            <div class="content-header">
+                <h1>New MetaRoom</h1>
+                <p>A MetaRoom groups environments of the same system (Oracle, Salesforce, MSSQL…).</p>
+            </div>
+
+            <div class="card" style="max-width:480px;">
+
+                <form>
+
+                    <div class="form-row">
+                        <label>MetaRoom name</label>
+                        <input type="text" placeholder="e.g. oracle, salesforce, mssql">
+                    </div>
+
+                    <div class="form-row">
+                        <label>Description</label>
+                        <input type="text" placeholder="What system is this MetaRoom for?">
+                    </div>
+
+                    <div class="form-row">
+                        <label>System type</label>
+                        <select>
+                            <option>Oracle</option>
+                            <option>PostgreSQL</option>
+                            <option>SQL Server</option>
+                            <option>MySQL</option>
+                            <option>Snowflake</option>
+                            <option>BigQuery</option>
+                            <option>Salesforce</option>
+                        </select>
+                    </div>
+
+                    <button class="btn-primary" style="margin-top:16px;">Create MetaRoom</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

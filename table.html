@@ -9,39 +9,133 @@
 
 <div class="layout">
 
-    <!-- Sidebar sem dáš nový sidebar skeleton s ikonami -->
+    <!-- SIDEBAR -->
+    <div class="sidebar">
 
+        <div class="sidebar-logo">Inmeta</div>
+
+        <!-- MAIN -->
+        <div class="sidebar-section-label">Main</div>
+
+        <a class="nav-link" href="overview.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm"></svg>
+            </span>
+            Overview
+        </a>
+
+        <a class="nav-link" href="metaspaces.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm"></svg>
+            </span>
+            MetaSpaces
+        </a>
+
+        <!-- CONTEXT -->
+        <div class="sidebar-section-label">Context</div>
+
+        <!-- ACTIVE METASPACE -->
+        <a class="nav-link active" href="metaspace.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm"></svg>
+            </span>
+            MetaSpace: dna
+        </a>
+
+        <!-- METAROOMS -->
+        <div class="sidebar-section-label">MetaRooms</div>
+
+        <a class="nav-link active" href="metaroom.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--neutral"></svg>
+            </span>
+            oracle
+        </a>
+
+        <a class="nav-link" href="metaroom.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--neutral"></svg>
+            </span>
+            salesforce
+        </a>
+
+        <a class="nav-link" href="metaroom.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--neutral"></svg>
+            </span>
+            bigquery
+        </a>
+
+        <!-- METALINKS -->
+        <div class="sidebar-section-label">MetaLinks</div>
+
+        <a class="nav-link active" href="metalink.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--accent"></svg>
+            </span>
+            oracle-prod
+        </a>
+
+        <!-- METASETS -->
+        <div class="sidebar-section-label">MetaSets</div>
+
+        <a class="nav-link active" href="metaset.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--accent"></svg>
+            </span>
+            customers
+        </a>
+
+        <!-- TABLES -->
+        <div class="sidebar-section-label">Tables</div>
+
+        <!-- ACTIVE TABLE -->
+        <a class="nav-link active" href="table.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--accent"></svg>
+            </span>
+            customers
+        </a>
+
+        <!-- RECENT -->
+        <div class="sidebar-section-label">Recent</div>
+
+        <a class="nav-link" href="metaset.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--accent"></svg>
+            </span>
+            MetaSet: customers
+        </a>
+
+    </div>
+
+
+
+    <!-- MAIN CONTENT -->
     <div style="flex:1; display:flex; flex-direction:column;">
+
+        <!-- TOPBAR -->
         <div class="topbar">
-            <div class="topbar-title">
-                Table: customers (MetaSet: customers / MetaLink: oracle-prod)
-            </div>
+            <div class="topbar-title">Table: customers</div>
             <div class="topbar-right">
                 <span class="tag tag-ai">AI</span>
-                <button class="btn-ghost">Explain table</button>
+                <button class="btn-ghost">Generate AI documentation</button>
             </div>
         </div>
 
+
+        <!-- CONTENT -->
         <div class="content">
+
             <div class="content-header">
-                <h1>customers</h1>
-                <p>Base customer entity table in oracle-prod (ORACLE).</p>
+                <h1>customers table</h1>
+                <p>Base customer table containing core identity, contact, and lifecycle attributes.</p>
             </div>
 
-            <div class="card" style="margin-bottom:24px;">
-                <div class="card-header">
-                    <div>
-                        <div class="card-title">Table metadata</div>
-                        <div class="card-subtitle">Physical and logical properties</div>
-                    </div>
-                </div>
-                <div style="font-size:13px; display:grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap:8px;">
-                    <div><strong>Owner:</strong> DNA_OWNER</div>
-                    <div><strong>Tablespace:</strong> USERS</div>
-                    <div><strong>Estimated rows:</strong> 1 234 567</div>
-                    <div><strong>Last analyzed:</strong> —</div>
-                    <div><strong>Engine:</strong> ORACLE</div>
-                </div>
+            <!-- TABLE INFO -->
+            <div class="card" style="margin-bottom:20px;">
+                <div class="card-title">Table details</div>
+                <p class="card-meta">Rows: ~120,000 • Columns: 24 • Primary Key: customer_id</p>
             </div>
 
             <div class="section-title">Columns</div>
@@ -51,59 +145,62 @@
                     <tr>
                         <th>Column</th>
                         <th>Type</th>
-                        <th>Length</th>
-                        <th>Precision</th>
-                        <th>Scale</th>
                         <th>Nullable</th>
-                        <th>Default</th>
-                        <th>Key</th>
-                        <th>FK target</th>
-                        <th>Comment</th>
-                        <th>AI Description</th>
+                        <th>Description</th>
+                        <th>Sample</th>
                     </tr>
                 </thead>
+
                 <tbody>
+
                     <tr>
                         <td>customer_id</td>
                         <td>NUMBER</td>
-                        <td>22</td>
-                        <td>10</td>
-                        <td>0</td>
-                        <td>NO</td>
-                        <td>NULL</td>
-                        <td><span class="tag">PK</span></td>
-                        <td>—</td>
-                        <td>Primary key of customer</td>
-                        <td>Unique identifier for each customer.</td>
+                        <td>No</td>
+                        <td>Unique identifier for each customer</td>
+                        <td>1024837</td>
                     </tr>
 
                     <tr>
-                        <td>segment_id</td>
-                        <td>NUMBER</td>
-                        <td>22</td>
-                        <td>6</td>
-                        <td>0</td>
-                        <td>YES</td>
-                        <td>NULL</td>
-                        <td>—</td>
-                        <td>segments.segment_id</td>
-                        <td>Optional link to segment</td>
-                        <td>Indicates which segment the customer is assigned to.</td>
+                        <td>first_name</td>
+                        <td>VARCHAR2(50)</td>
+                        <td>No</td>
+                        <td>Customer given name</td>
+                        <td>Sarah</td>
+                    </tr>
+
+                    <tr>
+                        <td>last_name</td>
+                        <td>VARCHAR2(50)</td>
+                        <td>No</td>
+                        <td>Customer surname</td>
+                        <td>Miller</td>
+                    </tr>
+
+                    <tr>
+                        <td>email</td>
+                        <td>VARCHAR2(255)</td>
+                        <td>Yes</td>
+                        <td>Email address used for communication</td>
+                        <td>sarah.miller@example.com</td>
                     </tr>
 
                     <tr>
                         <td>created_at</td>
-                        <td>DATE</td>
-                        <td>—</td>
-                        <td>—</td>
-                        <td>—</td>
-                        <td>NO</td>
-                        <td>SYSDATE</td>
-                        <td>—</td>
-                        <td>—</td>
-                        <td>Creation timestamp</td>
-                        <td>When the customer record was created in the system.</td>
+                        <td>TIMESTAMP</td>
+                        <td>No</td>
+                        <td>Date the customer profile was created</td>
+                        <td>2024-01-12</td>
                     </tr>
+
+                    <tr>
+                        <td>segment</td>
+                        <td>VARCHAR2(50)</td>
+                        <td>Yes</td>
+                        <td>Customer assigned segment category</td>
+                        <td>Premium</td>
+                    </tr>
+
                 </tbody>
             </table>
 

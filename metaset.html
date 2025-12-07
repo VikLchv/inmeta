@@ -9,26 +9,142 @@
 
 <div class="layout">
 
+    <!-- SIDEBAR -->
     <div class="sidebar">
+
         <div class="sidebar-logo">Inmeta</div>
 
+        <!-- MAIN -->
         <div class="sidebar-section-label">Main</div>
-        <a class="nav-link" href="overview.html">Overview</a>
-        <a class="nav-link active" href="metaspaces.html">MetaSpaces</a>
+
+        <a class="nav-link" href="overview.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm" viewBox="0 0 24 24"></svg>
+            </span>
+            Overview
+        </a>
+
+        <a class="nav-link" href="metaspaces.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm" viewBox="0 0 24 24"></svg>
+            </span>
+            MetaSpaces
+        </a>
+
+        <!-- CONTEXT -->
+        <div class="sidebar-section-label">Context</div>
+
+        <!-- ACTIVE METASPACE -->
+        <a class="nav-link active" href="metaspace.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm" viewBox="0 0 24 24"></svg>
+            </span>
+            MetaSpace: dna
+        </a>
+
+        <!-- METAROOMS -->
+        <div class="sidebar-section-label">MetaRooms</div>
+
+        <a class="nav-link active" href="metaroom.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--neutral" viewBox="0 0 24 24"></svg>
+            </span>
+            oracle
+        </a>
+
+        <a class="nav-link" href="metaroom.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--neutral" viewBox="0 0 24 24"></svg>
+            </span>
+            salesforce
+        </a>
+
+        <a class="nav-link" href="metaroom.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--neutral" viewBox="0 0 24 24"></svg>
+            </span>
+            bigquery
+        </a>
+
+        <!-- METALINKS -->
+        <div class="sidebar-section-label">MetaLinks</div>
+
+        <a class="nav-link" href="metalink.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--accent" viewBox="0 0 24 24"></svg>
+            </span>
+            oracle-dev
+        </a>
+
+        <a class="nav-link" href="metalink.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--accent" viewBox="0 0 24 24"></svg>
+            </span>
+            oracle-staging
+        </a>
+
+        <a class="nav-link active" href="metalink.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--accent" viewBox="0 0 24 24"></svg>
+            </span>
+            oracle-prod
+        </a>
+
+        <!-- METASETS -->
+        <div class="sidebar-section-label">MetaSets</div>
+
+        <a class="nav-link active" href="metaset.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--primary" viewBox="0 0 24 24"></svg>
+            </span>
+            customers
+        </a>
+
+        <a class="nav-link" href="metaset.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--primary" viewBox="0 0 24 24"></svg>
+            </span>
+            orders
+        </a>
+
+        <a class="nav-link" href="metaset.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--primary" viewBox="0 0 24 24"></svg>
+            </span>
+            billing
+        </a>
+
+        <!-- RECENT -->
+        <div class="sidebar-section-label">Recent</div>
+
+        <a class="nav-link" href="table.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--accent" viewBox="0 0 24 24"></svg>
+            </span>
+            Table: customers
+        </a>
+
     </div>
 
+
+    <!-- MAIN CONTENT AREA -->
     <div style="flex:1; display:flex; flex-direction:column;">
+
+        <!-- TOPBAR -->
         <div class="topbar">
             <div class="topbar-title">
-                MetaSet: customers (MetaLink: oracle-prod)
+                MetaSet: customers
             </div>
+
             <div class="topbar-right">
                 <span class="tag tag-ai">AI</span>
                 <button class="btn-ghost">Refresh AI descriptions</button>
             </div>
         </div>
 
+        <!-- CONTENT -->
         <div class="content">
+
             <div class="content-header">
                 <h1>customers MetaSet</h1>
                 <p>Core customer entities in the oracle-prod MetaLink.</p>
@@ -50,11 +166,13 @@
                         <td>Base customer table</td>
                         <td>24</td>
                     </tr>
+
                     <tr onclick="location.href='table.html';">
                         <td>customer_addresses</td>
                         <td>Shipping & billing addresses</td>
                         <td>13</td>
                     </tr>
+
                     <tr onclick="location.href='table.html';">
                         <td>customer_segments</td>
                         <td>Segment assignments</td>
@@ -62,7 +180,9 @@
                     </tr>
                 </tbody>
             </table>
+
         </div>
+
     </div>
 
 </div>
