@@ -9,24 +9,106 @@
 
 <div class="layout">
 
+    <!-- SIDEBAR -->
     <div class="sidebar">
+
         <div class="sidebar-logo">Inmeta</div>
 
+        <!-- MAIN -->
         <div class="sidebar-section-label">Main</div>
-        <a class="nav-link" href="overview.html">Overview</a>
-        <a class="nav-link active" href="metaspaces.html">MetaSpaces</a>
+
+        <a class="nav-link" href="overview.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm" viewBox="0 0 24 24"></svg>
+            </span>
+            Overview
+        </a>
+
+        <a class="nav-link" href="metaspaces.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm" viewBox="0 0 24 24"></svg>
+            </span>
+            MetaSpaces
+        </a>
+
+        <!-- CONTEXT -->
+        <div class="sidebar-section-label">Context</div>
+
+        <!-- ACTIVE METASPACE -->
+        <a class="nav-link active" href="metaspace.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm" viewBox="0 0 24 24"></svg>
+            </span>
+            MetaSpace: dna
+        </a>
+
+        <!-- METAROOMS LIST -->
+        <div class="sidebar-section-label">MetaRooms</div>
+
+        <!-- ACTIVE METAROOM -->
+        <a class="nav-link active" href="metaroom.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--neutral" viewBox="0 0 24 24"></svg>
+            </span>
+            oracle
+        </a>
+
+        <!-- OTHER ROOMS -->
+        <a class="nav-link" href="metaroom.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--neutral" viewBox="0 0 24 24"></svg>
+            </span>
+            salesforce
+        </a>
+
+        <a class="nav-link" href="metaroom.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--neutral" viewBox="0 0 24 24"></svg>
+            </span>
+            bigquery
+        </a>
+
+        <!-- RECENT -->
+        <div class="sidebar-section-label">Recent</div>
+
+        <a class="nav-link" href="table.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--accent" viewBox="0 0 24 24"></svg>
+            </span>
+            Table: customers
+        </a>
+
+        <a class="nav-link" href="metaset.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--accent" viewBox="0 0 24 24"></svg>
+            </span>
+            MetaSet: orders
+        </a>
+
+        <a class="nav-link" href="metalink.html">
+            <span class="sidebar-link-icon">
+                <svg class="icon icon-sm icon--accent" viewBox="0 0 24 24"></svg>
+            </span>
+            MetaLink: oracle-prod
+        </a>
     </div>
 
+
+    <!-- MAIN CONTENT AREA -->
     <div style="flex:1; display:flex; flex-direction:column;">
+
+        <!-- TOPBAR -->
         <div class="topbar">
-            <div class="topbar-title">MetaRoom: oracle (MetaSpace: dna)</div>
+            <div class="topbar-title">MetaRoom: oracle</div>
             <div class="topbar-right">
                 <span class="muted">System: Oracle</span>
                 <button class="btn-ghost">Connection settings</button>
             </div>
         </div>
 
+        <!-- CONTENT -->
         <div class="content">
+
             <div class="content-header">
                 <h1>oracle MetaRoom</h1>
                 <p>All Oracle environments connected to the dna MetaSpace.</p>
@@ -50,12 +132,14 @@
                         <td>connected</td>
                         <td>3</td>
                     </tr>
+
                     <tr onclick="location.href='metalink.html';">
                         <td>oracle-staging</td>
                         <td>staging</td>
                         <td>connected</td>
                         <td>5</td>
                     </tr>
+
                     <tr onclick="location.href='metalink.html';">
                         <td>oracle-prod</td>
                         <td>prod</td>
@@ -66,6 +150,7 @@
             </table>
 
             <button class="btn-primary" style="margin-top:16px;">+ Create MetaLink</button>
+
         </div>
     </div>
 
